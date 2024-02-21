@@ -9,7 +9,7 @@
 int main(void)
 {
 /*using puts to print hello world*/
-char mj = "\"Programming is like building a multilingual puzzle";
+char *mj = "\"Programming is like building a multilingual puzzle";
 puts(mj);
 return (0);
 }
