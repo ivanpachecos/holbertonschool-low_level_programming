@@ -14,8 +14,8 @@ int main(void)
 	/*while LOOP*/
 	while (end >= start)
 	{
-		putchar(end);
-		end--;
+		putchar(start);
+		start++;
 	}
 	putchar('\n');
 	return (0);
