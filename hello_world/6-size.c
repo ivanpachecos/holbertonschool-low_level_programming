@@ -1,7 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void) 
 {
+/*Show the bytes*/
 char c;
 int i;
 long int li;
