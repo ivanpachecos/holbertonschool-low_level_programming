@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-  * main - Prints the Alphabet
-  * Return: Always 0.
-  */
+ * print_alphabet - prints Alphabet
+ *
+ * Return: Always 0.
+ */
 void print_alphabet(void)
 {
 	char c;
