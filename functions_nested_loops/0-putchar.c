@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
+	put_char('_');
+	put_char('p');
+	put_char('u');
+	put_char('t');
+	put_char('c');
+	put_char('h');
+	put_char('a');
+	put_char('r');
+	put_char('\n');
 
 	return (0);
 }
