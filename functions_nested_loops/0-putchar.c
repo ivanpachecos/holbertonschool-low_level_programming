@@ -4,7 +4,7 @@
   * main - print 
   * Return: (value = 0)
   */
-int main(void)
+int printChar(void)
 {
 	printf("_putchar\n");
 	return (0);
