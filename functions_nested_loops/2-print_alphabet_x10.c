@@ -19,9 +19,9 @@ void print_alphabet_x10(void)
 		/*prints all alphabet*/
 		while (j <= 'z')
 		{
-			putchar(j);
+			_putchar(j);
 			j++;
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
