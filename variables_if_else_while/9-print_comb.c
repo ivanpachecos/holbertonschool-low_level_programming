@@ -17,7 +17,7 @@ int main(void)
 		}
 		putchar(i + '0');
 	}
-	/*finish with character $*/
+	/*new line*/
 	putchar('\n');
 	return (0);
 }
