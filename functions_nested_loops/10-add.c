@@ -1,7 +1,8 @@
 /**
-  * _abs - gives as absolute value of an integer with stdlib.h library
-  * @x: gives numbers of other fuction
-  * Return: (value integer numbers)
+  * add - add two parametros
+  * @a: gives numbers integer
+  * @b: gives numbers integer
+  * Return: (add)
   */
 int add(int a, int b)
 {
