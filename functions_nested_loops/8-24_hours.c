@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * jack_bauer - check the code
  *
- * Return: Always 0.
+ * Return: nothing
  */
 void jack_bauer(void)
 {
@@ -16,7 +16,7 @@ void jack_bauer(void)
 	for (h = 0; h < hours; h++)
 	{
 		/*second for minutes and prints hours, minutes*/
-		for(m = 0; m < minutes; m++)
+		for (m = 0; m < minutes; m++)
 		{
 			_putchar('0' + h / 10);
 			_putchar('0' + h % 10);
