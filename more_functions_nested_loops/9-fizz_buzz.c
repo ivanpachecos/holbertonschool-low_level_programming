@@ -22,7 +22,6 @@ void fizz_buzz(int start, int end)
 			putchar('u');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else if (start % 3 == 0)
 		{
@@ -30,7 +29,6 @@ void fizz_buzz(int start, int end)
 			putchar('i');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else if (start % 5 == 0)
 		{
@@ -38,15 +36,14 @@ void fizz_buzz(int start, int end)
 			putchar('u');
 			putchar('z');
 			putchar('z');
-			putchar(' ');
 		}
 		else
 		{
 			if (start > 9)
 				putchar('0' + start / 10);
 			putchar('0' + start % 10);
-			putchar(' ');
 		}
+		putchar(' ');
 	}
 	putchar('\n');
 }
