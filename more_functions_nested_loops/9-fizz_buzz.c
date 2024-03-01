@@ -45,7 +45,6 @@ void fizz_buzz(int start, int end)
 		}
 		if (start == end)
 			break;
-			
 		putchar(' ');
 	}
 	putchar('\n');
