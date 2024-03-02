@@ -1,4 +1,3 @@
-#include <string.h>
 
 /**
  * _strlen - leng of my string
@@ -8,5 +7,11 @@
 
 int _strlen(char *s)
 {
-	return (strlen(s));
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		;
+	}
+	return (i);
 }
