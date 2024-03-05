@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-  *  - half string
-  *
+  * puts_half - half string
   * @str: string
   */
+
 void puts_half(char *str)
 {
 	int long_str, half;
