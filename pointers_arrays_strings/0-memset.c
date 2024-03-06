@@ -5,6 +5,7 @@
   * @s: pointer of memory
   * @b: byte
   * @n: longitud
+  * Return: modificed value
   */
 
 char *_memset(char *s, char b, unsigned int n)
