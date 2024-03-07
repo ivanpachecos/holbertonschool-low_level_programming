@@ -1,4 +1,5 @@
-
+#include <stdio.h>
+#include <string.h>
 /**
   * _strchr - locates a character in a string.
   * @s: string to condition
@@ -15,5 +16,5 @@ char *_strchr(char *s, char c)
 			return (s);
 		s++;
 	}
-	return (s);
+	return (NULL);
 }
