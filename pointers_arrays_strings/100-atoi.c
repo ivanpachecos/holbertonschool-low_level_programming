@@ -3,30 +3,36 @@
   * @s: string
   * Return: integer
   */
-
 int _atoi(char *s)
 {
-	int i = 0;
-	int j = 1;
-	int digit_found = 0;
-	int index;
+	int index = 0;
+	unsigned int ni = 0;
+	int i = 1;
+	int digit = 0;
 
-	for (index = 0; s[index] != '\0'; index++)
+	while (s[index])
 	{
-		if (s[index] == '-')
+		if (s[index] == 45)
 		{
-			j *= -1;
+			i *= -1;
 		}
-		while (s[index] >= '0' && s[index] <= '9')
+
+		while (s[index] >= 48 && s[index] <= 57)
 		{
-			digit_found = 1;
-			i = (i * 10) + (s[index] - '0');
+			digit = 1;
+			ni = (ni * 10) + (s[index] - '0');
 			index++;
 		}
-		if (digit_found == 1)
-			break;
-	}
-	i *= j;
 
-	return (i);
+		if (digit == 1)
+		{
+			break;
+		}
+
+		index++;
+	}
+
+	ni *= i;
+	return (ni);
 }
+
