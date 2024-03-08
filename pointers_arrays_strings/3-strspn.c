@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
+  * _strspn - gets the length of a prefix substring.
   *
+  * @s: nitial segment
+  * @accept: only of bytes from accept
   *
-  *
-  *
+  * Return: numbers of bytes
   */
 
 unsigned int _strspn(char *s, char *accept)
