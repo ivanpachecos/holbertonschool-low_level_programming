@@ -1,32 +1,22 @@
 #include "main.h"
 
-/**
-  * _sqrt_recursion_helper - 
-  * _sqrt_recursion - 
-  *
-  *
-  */
 
-int recursion_data(int n, int start, int end)
-{
-
-	int mid;
-	
-	if (start > end)
-		return -1;
-	
-	mid = start + (end - start) / 2;
-
-    
-	if (mid * mid == n)
-		return mid;
-	else if (mid * mid < n)
-		return recursion_data(n, mid + 1, end);
-	else
-		return recursion_data(n, start, mid - 1);
-}
+int sqrt_opration(int n, int i);
 
 int _sqrt_recursion(int n)
 {
-	return recursion_data(n, 0, n);
+	return (sqrt_opration(n, 1));
+}
+
+int sqrt_opration(int n, int i)
+{
+	int sqrt = i * i;
+
+	if (sqrt > n)
+		return (-1);
+
+	if (sqrt == n)
+		return (i);
+
+	return (sqrt_opration(n, i + 1));
 }
