@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int sum, i, j, noNumber = 0;
+	int sum = 0, i, j;
+	int noNumber = 0;
 
 	if (argc > 1)
 	{
