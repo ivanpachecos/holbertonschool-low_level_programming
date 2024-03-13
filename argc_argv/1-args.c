@@ -8,22 +8,12 @@
   *
   * Return: always zero.
   */
-
 int main(int argc, char __attribute__((__unused__)) *argv[])
 {
 	
-	int count;
+	int count = 0;
+	count += argc -1;
+	printf("%d\n", count);
 
-	if (argc > 1)
-	{
-		for (count = 1; count < argc; count++)
-		/**	printf("%d\n", count);**/
-			;
-		printf("%d\n", count);
-	}
-	else {
-		count = 0;
-		printf("%d\n", count);
-	}
-	return (0);
+	return (0);	
 }
