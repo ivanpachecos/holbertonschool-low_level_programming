@@ -4,17 +4,34 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	char *s;
-	int lenS1 = strlen(s1);
-	int lenS2 = strlen(s2);
+	int len_s1 = 0;
+	int len_s2 = 0;
+	int len_result, i, j;
+	char *strCo;
 
-	int resultLen = lenS1 + lenS2 + 1;
+    
+	while (s1[len_s1] != '\0')
+		len_s1++;
+	
+ 
+	while (s2[len_s2] != '\0')
+		len_s2++;
 
-	s = (char*)malloc(resultLen * (sizeof(char)));
-	if (s == NULL)
+ 
+	len_result = len_s1 + len_s2 + 1;
+    
+	strCo = (char*)malloc(len_result * sizeof(char));
+   
+	if (strCo == NULL)
 		return (NULL);
-	strcpy(s, s1);
-	strcat(s, s2);
 
-	return (s);
+	for (i = 0; i < len_s1; i++)
+		strCo[i] = s1[i];
+	
+	for (j = 0; j < len_s2; j++)
+		strCo[len_s1 + j] = s2[j];
+ 
+	strCo[len_result - 1] = '\0';
+
+	return strCo;
 }
