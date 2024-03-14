@@ -9,20 +9,22 @@ char *str_concat(char *s1, char *s2)
 	int len_result, i, j;
 	char *strCo;
 	
-	/*s1 or s2 return null*/
-	if (s1 == NULL && s2 == NULL)
-		return NULL;
-    
+	/*s1 or s2 is caratecter empty string */
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+    	/*---length of each of the strings passed---*/
 	while (s1[len_s1] != '\0')
 		len_s1++;
 	
- 
 	while (s2[len_s2] != '\0')
 		len_s2++;
 
- 
+ 	/*---sum of two string including the null caracter---*/
 	len_result = len_s1 + len_s2 + 1;
     
+	/*point to a newly allocated space in memory*/
 	strCo = (char*)malloc(len_result * sizeof(char));
    
 	if (strCo == NULL)
@@ -36,5 +38,5 @@ char *str_concat(char *s1, char *s2)
  
 	strCo[len_result - 1] = '\0';
 
-	return strCo;
+	return (strCo);
 }
