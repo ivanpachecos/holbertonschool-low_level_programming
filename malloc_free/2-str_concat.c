@@ -10,7 +10,7 @@ char *str_concat(char *s1, char *s2)
 	char *strCo;
 	
 	/*s1 or s2 return null*/
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return NULL;
     
 	while (s1[len_s1] != '\0')
