@@ -8,7 +8,10 @@ char *str_concat(char *s1, char *s2)
 	int len_s2 = 0;
 	int len_result, i, j;
 	char *strCo;
-
+	
+	/*s1 or s2 return null*/
+	if (s1 == NULL || s2 == NULL)
+		return NULL;
     
 	while (s1[len_s1] != '\0')
 		len_s1++;
