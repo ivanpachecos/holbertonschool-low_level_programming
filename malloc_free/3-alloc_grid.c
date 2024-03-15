@@ -2,11 +2,14 @@
 #include <stdlib.h>
 
 /**
+  * alloc_grid - allocates memory for a 2d array of integers
   *
+  * @width: of the grid
+  * @height: of the grid
   *
-  *
-  *
+  * Return: pointer already allocateed or NULL
   */
+
 int **alloc_grid(int width, int height)
 {
 	int **grid;
