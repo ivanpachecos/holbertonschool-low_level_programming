@@ -5,15 +5,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *s;
-
+   	unsigned int total_size, i; 
+	char *ptr;
 	if (nmemb == 0 || size == 0)
-		return (NULL);
+		return NULL;
 
-	s = malloc(nmemb * size);
-	if (s == NULL)
-		return (NULL);
-	memset(s, 0, nmemb * size);
+	total_size = nmemb * size;
 
-	return (s);
+	p = (char *)malloc(total_size);
+    
+	if (p == NULL)
+		return NULL; 
+   
+	for (i = 0; i < total_size; i++) {
+		p[i] = 0;
+	}
+
+ 
+	return p;
 }
