@@ -1,93 +1,91 @@
 #include <stdlib.h>
 #include "dog.h"
 
-int string_length(char *str);
-char *copy_string(char *dest, char *src);
+int srt_len(char *s);
+char *fun_copy_str(char *dest, char *src);
 
 /**
- * new_dog - Creates a new dog structure
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
- *
- * Return: Pointer to the new dog structure, or NULL if failed
- */
+  * new_dog - ...
+  * @name: ...
+  * @age: ...
+  * @owner: ...
+  *
+  * Return: ...
+  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-        dog_t *new_dog_ptr;
-        int name_length = 0, owner_length = 0;
+	dog_t *dog_nw;
+	int name_ = 0, owner_ = 0;
 
-        if (name != NULL && owner != NULL)
-        {
-                name_length = string_length(name) + 1;
-                owner_length = string_length(owner) + 1;
-                new_dog_ptr = malloc(sizeof(dog_t));
+	if (name != NULL && owner != NULL)
+	{
+		name_ = srt_len(name) + 1;
+		owner_ = srt_len(owner) + 1;
+		dog_nw = malloc(sizeof(dog_t));
 
-                if (new_dog_ptr == NULL)
-                        return (NULL);
+		if (dog_nw == NULL)
+			return (NULL);
 
-                new_dog_ptr->name = malloc(sizeof(char) * name_length);
+		dog_nw->name = malloc(sizeof(char) * name_);
 
-                if (new_dog_ptr->name == NULL)
-                {
-                        free(new_dog_ptr);
-                        return (NULL);
-                }
+		if (dog_nw->name == NULL)
+		{
+			free(dog_nw);
+			return (NULL);
+		}
 
-                new_dog_ptr->owner = malloc(sizeof(char) * owner_length);
+		dog_nw->owner = malloc(sizeof(char) * owner_);
 
-                if (new_dog_ptr->owner == NULL)
-                {
-                        free(new_dog_ptr->name);
-                        free(new_dog_ptr);
-                        return (NULL);
-                }
+		if (dog_nw->owner == NULL)
+		{
+			free(dog_nw->name);
+			free(dog_nw);
+			return (NULL);
+		}
 
-                new_dog_ptr->name = copy_string(new_dog_ptr->name, name);
-                new_dog_ptr->owner = copy_string(new_dog_ptr->owner, owner);
-                new_dog_ptr->age = age;
-        }
+		dog_nw->name = fun_copy_str(dog_nw->name, name);
+		dog_nw->owner = fun_copy_str(dog_nw->owner, owner);
+		dog_nw->age = age;
+	}
 
-        return (new_dog_ptr);
+	return (dog_nw);
 }
 
 /**
- * string_length - Calculates the length of a string
- * @str: String to calculate the length
- *
- * Return: Length of the string
- */
-int string_length(char *str)
+  * srt_len - Returns the length of a string
+  * @s: String to count
+  *
+  * Return: String length
+  */
+int srt_len(char *s)
 {
-        int length = 0;
+	int c = 0;
 
-        while (*str != '\0')
-        {
-                length++;
-                str++;
-        }
+	for (; *s != '\0'; s++)
+	{
+		c++;
+	}
 
-        return (length);
+	return (c);
 }
 
 /**
- * copy_string - Copies a string
- * @dest: Destination buffer
- * @src: Source string
- *
- * Return: Pointer to the destination buffer
- */
-char *copy_string(char *dest, char *src)
+  * fun_copy_str - Copy a string
+  * @dest: Destination value
+  * @src: Source value
+  *
+  * Return: the pointer to dest
+  */
+char *fun_copy_str(char *dest, char *src)
 {
-        while (*src != '\0')
-        {
-                *dest = *src;
-                dest++;
-                src++;
-        }
+	int i;
 
-        *dest = '\0';
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
 
-        return (dest);
+	dest[i++] = '\0';
+
+	return (dest);
 }
-
