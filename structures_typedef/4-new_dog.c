@@ -5,13 +5,14 @@ int srt_len(char *s);
 char *fun_copy_str(char *dest, char *src);
 
 /**
-  * new_dog - ...
-  * @name: ...
-  * @age: ...
-  * @owner: ...
-  *
-  * Return: ...
-  */
+ * new_dog - Creates a new dog structure
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
+ *
+ * Return: Pointer to the new dog structure, or NULL if failed
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog_nw;
