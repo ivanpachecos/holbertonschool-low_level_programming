@@ -3,9 +3,13 @@
 #include "3-calc.h"
 
 /**
- * 
- *
- */
+  * main - function
+  *
+  * @argc: number of arguments
+  * @argv: array pointer of the arguments
+  *
+  * Return: always zero
+  */
 
 int main(int argc, char *argv[])
 {
@@ -17,12 +21,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-    
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	op_f = get_op_func(argv[2]);
 
-   
 	if (op_f == NULL)
 	{
 		printf("Error\n");
