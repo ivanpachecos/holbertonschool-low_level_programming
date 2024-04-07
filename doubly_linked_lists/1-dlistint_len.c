@@ -1,13 +1,13 @@
 #include "lists.h"
 
 /**
+  * dlistint_len - length of the elemts.
+  *
+  * @h: access a all prototype.
   *
   *
   *
-  *
-  *
-  *
-  *
+  * Return: longth of all elemets.
   */
 size_t dlistint_len(const dlistint_t *h)
 {
