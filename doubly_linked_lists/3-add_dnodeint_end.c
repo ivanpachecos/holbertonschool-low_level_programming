@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdlib.h>
 /**
  * add_dnodeint_end - Add a new node at the end of a `dlistint_t` list
  * @head: double pointer to head node
