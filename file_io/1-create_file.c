@@ -3,12 +3,12 @@
 #include <fcntl.h>
 
 /**
+  * create_file - function that creates a file.
   *
+  * @filename: pointer of the names files.
+  * @text_content: text
   *
-  *
-  *
-  *
-  *
+  * Return: one.
   */
 int create_file(const char *filename, char *text_content)
 {
@@ -29,6 +29,6 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	write(fd, text_content, len);
-	
+
 	return (1);
 }
