@@ -14,15 +14,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t fd, len, wr;
 	char *buffer;
 
-	buffer = (char *)malloc(sizeof(char) * (letters + 1));
+	buffer = (char *)malloc(letters);
 
-	if (buffer == NULL && filename == NULL)
+	if (buffer == NULL || filename == NULL)
 		return (0);
 
 	fd = open("Requiescat", O_RDONLY);
 
 	if (fd == -1)
+	{
+		free(buffer);
 		return (0);
+	}
 
 	len = read(fd, buffer, letters);
 
